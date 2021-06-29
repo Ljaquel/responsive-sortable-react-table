@@ -1,0 +1,36 @@
+{
+  "name": "responsive-sortable-react-table",
+  "version": "1.0.0",
+  "description": "A reusable table component made for react, both responsive and sortable.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ljaquel/responsive-sortable-react-table.git"
+  },
+  "keywords": [
+    "table",
+    "react",
+    "responsive",
+    "mobile",
+    "desktop",
+    "sort",
+    "sortable"
+  ],
+  "author": "Liomard J Mesa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ljaquel/responsive-sortable-react-table/issues"
+  },
+  "homepage": "https://github.com/Ljaquel/responsive-sortable-react-table#readme",
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

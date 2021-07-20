@@ -10,7 +10,16 @@ $backgroundColor: rgba(245, 246, 255, 1.000) !default;
     color: $textColor;
 }
 
+.responsive-sortable-react-table th {
+  padding: 10px;
+}
+
+.responsive-sortable-react-table td {
+  padding: 10px;
+}
+
 .responsive-sortable-react-table-pagination {
+  margin-top: 10px;
   display: inline-block;
   background-color: #ffffff;
 }

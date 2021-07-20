@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -19,7 +20,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           "css-loader",
           // Compiles Sass to CSS
@@ -59,5 +60,8 @@ module.exports = {
       amd: "ReactDOM",
       root: "ReactDOM"
     }
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({ filename: "style.css" }),
+  ]
 };

@@ -6,7 +6,8 @@
 ```
 ## Usage
 ```
-    import { Table } from responsive-sortable-react-table;
+    import Table from 'responsive-sortable-react-table';
+    import 'responsive-sortable-react-table/dist/style.css'
 
     <Table {options...} />
 ```

@@ -1,8 +1,11 @@
 # responsive-sortable-react-table
- A reusable table component made for react which is both responsive and sortable
+ Fully Customizable React Table Component\
+ * Responsive
+ * Sortable
+ * Pagination
 ## Installation
 ```
-    npm install responsive-sortable-react-table -save
+    npm install responsive-sortable-react-table
 ```
 ## Usage
 ```
@@ -10,11 +13,6 @@
     import 'responsive-sortable-react-table/dist/style.css'
 
     <Table {options...} />
-```
-#### Importing default styles
-Inside your own scs file:
-```
-@import '../table/css/table.scss';
 ```
 ## Options
 * content: Array of Objects | Required\
@@ -24,19 +22,23 @@ Inside your own scs file:
 * className: String\
     Class name for the table component. This will be inserted to the table html tag
 * breakpoint: Number\
-    Number in px. Determines breakpoint for the desktop-mobile layout transition of the table
+    Number in 'px'. Determines breakpoint for the desktop-mobile layout transition of the table
 * onSort: Function\
     Function to be called whenever user clicks a header for sorting. This function will be provided an object with the two following fields, 'key' and 'dir'. Please make use fo those for your sorting algorithm. 'key' contains the key field the user clicked on while 'dir' contains the direction of the sorting which is either 1 or -1.
 * sortDir: Number 1 | -1\
-    You can provide a sort direction you want to be the table to be displayed on by default
+    You can provide a sorting direction you want to be the table to be displayed on by default
 * sortKey: String\
     sortKey takes the string which determines which key field should be sorted by default
 * headerClass: String\
-    Class name that will get applied to the head tag
+    Class name applied to head tag
 * bodyClass: String\
-    Class name that will get applied to body tag
+    Class name applied to body tag
+* paginationClass: String\
+    Class name applied to pagination container
+* pageSize: Number\
+    Maximum number of rows per page
  
-## More styling
+## Styling
 Following, there are examples on how to further style individual table cells, rows or columns by making use of the table class selector\
 Note that all cells get applied two classnames by default which are the column the pertain to and an ID which identifies its row
 
@@ -74,7 +76,9 @@ All content cells under an specific column
   background-color: #868686;
 }
 ```
-
-## Demo
-
-Follow this [Link](https://github.com/Ljaquel/mdtest/) for a demo.
+Pagination links
+```
+.my-pagination a {
+  background-color: #868686;
+}
+```

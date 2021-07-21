@@ -1,5 +1,5 @@
 # responsive-sortable-react-table
- Fully Customizable React Table Component\
+ Fully Customizable React Table Component
  * Responsive
  * Sortable
  * Pagination
@@ -12,11 +12,60 @@
     import Table from 'responsive-sortable-react-table';
     import 'responsive-sortable-react-table/dist/style.css'
 
-    <Table {options...} />
+    const App = () => {
+
+      const headers = {
+        "id": "ID",
+        "name": "Name",
+        "email": "Email",
+        "major": "Major"
+      }
+
+      const content = [
+        {
+            "id": "112018495",
+            "name": "Jaquel",
+            "email": "lj@gmail.com",
+            "major": "Comp. Science"
+        },
+        {
+            "id": "111694728",
+            "name": "Joe",
+            "email": "joe@gmail.com",
+            "major": "Business"
+        },
+        {
+            "id": "114729405",
+            "name": "Clara",
+            "email": "clara@gmail.com",
+            "major": "Criminal Justice"
+        }
+      ]
+
+      const handleSort = (obj) => {
+        content.sort((a, b) => (a[obj.key] > b[obj.key]) ? obj.dir : -1*obj.dir)
+      }
+
+      return (
+        <Table
+          headers={headers}
+          content={content}
+          breakpoint={768}
+          pageSize={4}
+          onSort={(obj) => {handleSort(obj)}}
+          className="my-table"
+          headerClass="my-header"
+          bodyClass="my-body"
+          paginationClass="my-pagination"
+          />
+      )
+    }
+
+    export default App;
 ```
 ## Options
 * content: Array of Objects | Required\
-    Table's content array where each object maps field keys to values
+    Array of objects. Table's content array where each object maps field keys to values
 * headers: Object\
     Object mapping field keys to the label you want to be displayed for on that field's column header
 * className: String\
@@ -38,47 +87,12 @@
 * pageSize: Number\
     Maximum number of rows per page
  
-## Styling
-Following, there are examples on how to further style individual table cells, rows or columns by making use of the table class selector\
-Note that all cells get applied two classnames by default which are the column the pertain to and an ID which identifies its row
+## Customization
+The easiest way to tweak react-colorful is to create another stylesheet to override the default styles.
 
-Specific row
-```
-._112479392 {
-  background-color: #858585;
-}
-```
-Specific column
-```
-.email {
-  background-color: #858585;
-}
-```
-Specific cell
-```
-._112067971 td.major {
-  background-color: white;
-}
-```
-All content cells or all header cells:
-```
-.my-table th {
-  padding: 10px;
-}
+Note: All cells get applied two classnames by default which are taken from the content and headers props objects:
+* Given the headers prop object (key,value) pairs, which cell will get applied the corresponding key as classname
+* Given the content prop object, the table takes the value of the first (key, value) pair and asssignes it to the cell as className
 
-.my-table td {
-  padding: 10px;
-}
-```
-All content cells under an specific column
-```
-.my-body td.credits {
-  background-color: #868686;
-}
-```
-Pagination links
-```
-.my-pagination a {
-  background-color: #868686;
-}
-```
+## Feedback - Report an Issue
+Follow this [link](https://github.com/Ljaquel/responsive-sortable-react-table/issues)

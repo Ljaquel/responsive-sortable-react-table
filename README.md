@@ -88,7 +88,7 @@
     Maximum number of rows per page
  
 ## Customization
-The easiest way to tweak react-colorful is to create another stylesheet to override the default styles.
+The easiest way to customize the table is to create another stylesheet to override the default styles.
 
 Note: All cells get applied two classnames by default which are taken from the content and headers props objects:
 * Given the headers prop object (key,value) pairs, which cell will get applied the corresponding key as classname

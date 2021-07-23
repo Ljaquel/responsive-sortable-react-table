@@ -6,8 +6,8 @@
 
 ## Live Demos
  * [Site](https://ljaquel.github.io/responsive-sortable-react-table-demo/)
- * [CodeSandbox](https://ljaquel.github.io/responsive-sortable-react-table-demo/)
- 
+ * [CodeSandbox](https://codesandbox.io/s/keen-framework-8qlpf?file=/src/App.js&resolutionWidth=973&resolutionHeight=757)
+
 ## Installation
 ```
     npm install responsive-sortable-react-table

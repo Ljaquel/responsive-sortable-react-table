@@ -91,9 +91,14 @@
     Class name applied to pagination container
 * pageSize: Number\
     Maximum number of rows per page
+
+## Sorting
+Sorting feature gets activated when you provide the sorting function prop (onSort). That function will be called whenever user clicks a header for sorting. This function will be provided an object with the two following fields, 'key' and 'dir'. Please make use fo those for your sorting algorithm. 'key' contains a string which represents the key field the user clicked on while 'dir' contains the direction of the sorting which is either 1 or -1.
  
 ## Customization
-The easiest way to customize the table is to create another stylesheet to override the default styles.
+The easiest way to customize the table is to create another stylesheet to override the default styles. 
+
+You can provide your custom className to the table through the className prop, but note that it also has a default className which is responsive-sortable-react-table.
 
 Note: All cells get applied two classnames by default which are taken from the content and headers props objects:
 * Given the headers prop object (key,value) pairs, which cell will get applied the corresponding key as classname

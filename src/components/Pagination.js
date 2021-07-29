@@ -11,17 +11,17 @@ const Pagination = ({rowsPerPage, totalRows, paginate, currentPage, paginationCl
   const isLast = currentPage === pageNumbers.length
   return (
     <div className={`responsive-sortable-react-table-pagination ${paginationClass}`}>
-      <a className='prev' onClick={() => paginate(isFirst?currentPage:currentPage-1)} href='!#'>
+      <button className='prev' onClick={() => paginate(isFirst?currentPage:currentPage-1)}>
         {'<'}
-      </a>
+      </button>
       {pageNumbers.map(n => (
-        <a className={`${currentPage===n?'selected':''}`} key={n} onClick={() => paginate(n)} href='!#'>
+        <button className={`${currentPage===n?'selected':''}`} key={n} onClick={() => paginate(n)}>
           {n}
-        </a>
+        </button>
       ))}
-      <a className='next' onClick={() => paginate(isLast?currentPage:currentPage+1)} href='!#'>
+      <button className='next' onClick={() => paginate(isLast?currentPage:currentPage+1)}>
         {'>'}
-      </a>
+      </button>
     </div>
   )
 }

@@ -1,19 +1,19 @@
 import React from 'react';
 import PT from 'prop-types';
-import { Tr, Th } from './index';
+import { Th } from './index';
 
-const Header = ({ headers, headerClass = '', sort, handleSort }) => {
+const Header = ({ headers, headerClass = '', sort, handleSort, onSort:sortable }) => {
   const headerContent = Object.keys(headers).map((key, index) =>
-    <Th key={index} sortKey={key} sort={sort} handleSort={handleSort}>
+    <Th key={index} sortKey={key} sort={sort} handleSort={handleSort} sortable={sortable?true:false}>
       {headers[key]}
     </Th>
   )
 
   return (
     <thead className={headerClass}>
-      <Tr>   
+      <tr>   
         {headerContent}
-      </Tr>
+      </tr>
     </thead>
   );
 }

@@ -24,7 +24,7 @@ $backgroundColor: rgba(245, 246, 255, 1.000) !default;
   background-color: #ffffff;
 }
 
-.responsive-sortable-react-table-pagination a {
+.responsive-sortable-react-table-pagination button {
   float: left;
   padding: 3px 6px;
   color: rgb(0, 72, 167);
@@ -38,6 +38,6 @@ $backgroundColor: rgba(245, 246, 255, 1.000) !default;
   border-color:rgb(35, 123, 255);
 }
 
-.responsive-sortable-react-table-pagination a:hover {
+.responsive-sortable-react-table-pagination button:hover {
   background-color: #e0e0e0;
 }

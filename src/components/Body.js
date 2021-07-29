@@ -1,6 +1,5 @@
 import React from 'react';
 import PT from 'prop-types';
-import { Tr, Td } from './index';
 
 const Body = ({ content, bodyClass = ''}) => {
   const bodyContent = content.map((row, index) => {
@@ -9,13 +8,13 @@ const Body = ({ content, bodyClass = ''}) => {
       rowContent.push({ key: key, value: row[key] });
     }
     return (
-      <Tr key={index} className={`_${rowContent[0].value}`}>
+      <tr key={index} className={`_${rowContent[0].value}`}>
         {rowContent.map((data, index) => 
-          <Td key={index} className={data.key}>
+          <td key={index} className={data.key}>
             {data.value}
-          </Td>
+          </td>
         )}
-      </Tr> 
+      </tr> 
     )
   })
 

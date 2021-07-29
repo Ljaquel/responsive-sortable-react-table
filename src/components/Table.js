@@ -23,7 +23,7 @@ const Table = (props) => {
         {headers && isDesktop && <Header {...props} sort={sort} handleSort={handleSort} />}
         {isDesktop ? <Body {...props} content={currentRows}/> : <Mobile {...props}/>}
       </table>
-      {isDesktop &&
+      {isDesktop && 
         <Pagination
           paginationClass={paginationClass}
           rowsPerPage={rowsPerPage}

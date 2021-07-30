@@ -1,6 +1,6 @@
 {
   "name": "responsive-sortable-react-table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A reusable table component made for react, both responsive and sortable.",
   "main": "./dist/bundle.js",
   "scripts": {

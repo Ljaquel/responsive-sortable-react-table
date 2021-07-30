@@ -83,10 +83,6 @@
     You can provide a sorting direction you want to be the table to be displayed on by default
 * sortKey: String\
     sortKey takes the string which determines which key field should be sorted by default
-* headerClass: String\
-    Class name applied to head tag
-* bodyClass: String\
-    Class name applied to body tag
 * paginationClass: String\
     Class name applied to pagination container
 * pageSize: Number\

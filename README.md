@@ -100,5 +100,16 @@ Note: All cells get applied two classnames by default which are taken from the c
 * Given the headers prop object (key,value) pairs, which cell will get applied the corresponding key as classname
 * Given the content prop object, the table takes the value of the first (key, value) pair and asssignes it to the cell as className
 
+#### Customizing icons colors
+```
+  .responsive-sortable-react-table g {
+    fill: rgb(255, 255, 255)
+  }
+
+  .responsive-sortable-react-table-pagination g {
+    fill: rgb(255, 255, 255)
+  }
+```
+
 ## Feedback - Report an Issue
 Follow this [link](https://github.com/Ljaquel/responsive-sortable-react-table/issues)

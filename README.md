@@ -73,6 +73,8 @@
     Object mapping field keys to the label you want to be displayed for on that field's column header
 * className: String\
     Class name for the table component. This will be inserted to the table html tag
+* mobileClassName: String\
+    Class name for the table component while on Mobile Layout. If provided it will override 'className' when in Mobile Layout
 * breakpoint: Number\
     Number in 'px'. Determines breakpoint for the desktop-mobile layout transition of the table
 * onSort: Function\
@@ -84,7 +86,9 @@
 * paginationClass: String\
     Class name applied to pagination container
 * pageSize: Number\
-    Maximum number of rows per page
+    Maximum number of rows per page. This number prop serves as pagination activator, meaning, if it is not provided, there would be no pagination
+* mobilePageSize: Number\
+    Maximum number of rows per page while on Mobile layout. If not provided, Mobile Layout will share Desktop's page size
 
 ## Sorting
 Sorting feature gets activated when you provide the sorting function prop (onSort). That function will be called whenever user clicks a header for sorting. This function will be provided an object with the two following fields, 'key' and 'dir'. Please make use fo those for your sorting algorithm. 'key' contains a string which represents the key field the user clicked on while 'dir' contains the direction of the sorting which is either 1 or -1.
@@ -103,7 +107,7 @@ All cells get applied two classnames by default behavior. Those two are taken fr
 For Example: Following the data from the 'Usage' section, the second cell would have the following classname by default: '112018495 name' 
 
 #### Customizing Sorting and Pagination Icons
-Color Customization:
+* Color Customization:
 ```
   .responsive-sortable-react-table g {
     fill: rgb(255, 255, 255)
@@ -113,7 +117,8 @@ Color Customization:
     fill: rgb(255, 255, 255)
   }
 ```
-Size and Related Properties:
+
+* Size and Related Properties:
 ```
   .responsive-sortable-react-table svg {
     width: 10px;

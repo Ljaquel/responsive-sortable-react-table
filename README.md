@@ -59,8 +59,6 @@
           pageSize={4}
           onSort={(obj) => {handleSort(obj)}}
           className="my-table"
-          headerClass="my-header"
-          bodyClass="my-body"
           paginationClass="my-pagination"
           />
       )
@@ -92,15 +90,20 @@
 Sorting feature gets activated when you provide the sorting function prop (onSort). That function will be called whenever user clicks a header for sorting. This function will be provided an object with the two following fields, 'key' and 'dir'. Please make use fo those for your sorting algorithm. 'key' contains a string which represents the key field the user clicked on while 'dir' contains the direction of the sorting which is either 1 or -1.
  
 ## Customization
-The easiest way to customize the table is to create another stylesheet to override the default styles. 
+The easiest way to customize the table is to create another stylesheet to override the default styles.
 
-You can provide your custom className to the table through the className prop, but note that it also has a default className which is responsive-sortable-react-table.
+User can provide custom class names for the table and the pagination container separately. Follow the 'options' sections for specific directions. Note that classNames are not required for customization since both the table and pagination container already have default class names, which are: 'responsive-sortable-react-table' and 'responsive-sortable-react-table-pagination' respectively.
 
-Note: All cells get applied two classnames by default which are taken from the content and headers props objects:
-* Given the headers prop object (key,value) pairs, which cell will get applied the corresponding key as classname
+User can further customize the header and body tags by using css tag selectors. For example: assume 'my-table' is the custom class you provided then you could do: '.my-table tbody { }', '.my-table td {}' etc...
+
+#### Customizing Specific Cells, Rows or Columns
+All cells get applied two classnames by default behavior. Those two are taken from the content and headers props objects user provides to the component:
+* Given the headers prop object (key,value) pairs, each cell will get applied the corresponding key as classname
 * Given the content prop object, the table takes the value of the first (key, value) pair and asssignes it to the cell as className
+For Example: Following the data from the 'Usage' section, the second cell would have the following classname by default: '112018495 name' 
 
-#### Customizing icons colors
+#### Customizing Sorting and Pagination Icons
+Color Customization:
 ```
   .responsive-sortable-react-table g {
     fill: rgb(255, 255, 255)
@@ -108,6 +111,12 @@ Note: All cells get applied two classnames by default which are taken from the c
 
   .responsive-sortable-react-table-pagination g {
     fill: rgb(255, 255, 255)
+  }
+```
+Size and Related Properties:
+```
+  .responsive-sortable-react-table svg {
+    width: 10px;
   }
 ```
 

@@ -70,19 +70,19 @@
 * content: Array of Objects | Required\
     Array of objects. Table's content array where each object maps field keys to values
 * headers: Object\
-    Object mapping field keys to the label you want to be displayed for on that field's column header
+    Object mapping field keys to strings representing the label that will be displayed on the header of the table
 * className: String\
-    Class name for the table component. This will be inserted to the table html tag
+    Class name for the table component. This will be inserted to the table html tag. This is not required as you could just use the class name it comes with by default which is 'responsive-sortable-react-table'
 * mobileClassName: String\
-    Class name for the table component while on Mobile Layout. If provided it will override 'className' when in Mobile Layout
+    Class name for the table component while on Mobile Layout. If provided it will override the 'className' you provided (if any) while on Mobile Layout
 * breakpoint: Number\
     Number in 'px'. Determines breakpoint for the desktop-mobile layout transition of the table
 * onSort: Function\
-    Function to be called whenever user clicks a header for sorting. This function will be provided an object with the two following fields, 'key' and 'dir'. Please make use fo those for your sorting algorithm. 'key' contains the key field the user clicked on while 'dir' contains the direction of the sorting which is either 1 or -1.
+    Function to be called whenever user clicks a header for sorting. This function will be provided an object with the two following fields, 'key' and 'dir'. Please make use of those for your sorting algorithm. 'key' contains the key field the user clicked on while 'dir' contains the direction of the sorting which is either 1 or -1.
 * sortDir: Number 1 | -1\
-    You can provide a sorting direction you want to be the table to be displayed on by default
+    You can let the Table know which direction of sorting your content originally arrives the Table. Thus, updating sorting icons acordingly
 * sortKey: String\
-    sortKey takes the string which determines which key field should be sorted by default
+    You can let the Table know on which key is the original sorting based on. Thus, being able to return expected parameters when clicking on a header for sorting
 * paginationClass: String\
     Class name applied to pagination container
 * pageSize: Number\
@@ -91,7 +91,7 @@
     Maximum number of rows per page while on Mobile layout. If not provided, Mobile Layout will share Desktop's page size
 
 ## Sorting
-Sorting feature gets activated when you provide the sorting function prop (onSort). That function will be called whenever user clicks a header for sorting. This function will be provided an object with the two following fields, 'key' and 'dir'. Please make use fo those for your sorting algorithm. 'key' contains a string which represents the key field the user clicked on while 'dir' contains the direction of the sorting which is either 1 or -1.
+Sorting feature gets activated when you provide the sorting function prop (onSort). That function will be called whenever user clicks a header for sorting. This function will be provided an object with the two following fields, 'key' and 'dir'. Please make use of those for your sorting algorithm. 'key' contains a string which represents the key field the user clicked on while 'dir' contains the direction of the sorting which is either 1 or -1.
  
 ## Customization
 The easiest way to customize the table is to create another stylesheet to override the default styles.

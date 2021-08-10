@@ -73,8 +73,6 @@
     Object mapping field keys to strings representing the label that will be displayed on the header of the table
 * className: String\
     Class name for the table component. This will be inserted to the table html tag. This is not required as you could just use the class name it comes with by default which is 'responsive-sortable-react-table'
-* mobileClassName: String\
-    Class name for the table component while on Mobile Layout. If provided it will override the 'className' you provided (if any) while on Mobile Layout
 * breakpoint: Number\
     Number in 'px'. Determines breakpoint for the desktop-mobile layout transition of the table
 * onSort: Function\
@@ -99,6 +97,11 @@ The easiest way to customize the table is to create another stylesheet to overri
 User can provide custom class names for the table and the pagination container separately. Follow the 'options' sections for specific directions. Note that classNames are not required for customization since both the table and pagination container already have default class names, which are: 'responsive-sortable-react-table' and 'responsive-sortable-react-table-pagination' respectively.
 
 User can further customize the header and body tags by using css tag selectors. For example: assume 'my-table' is the custom class you provided then you could do: '.my-table tbody { }', '.my-table td {}' etc...
+
+#### Styling Mobile View
+The table has a conditional className that only gets applied while in mobile layout. Use '--mobile-view' to style the mobile view of the table
+
+Note that in mobile view each item is enclosed in a tbody tag as oposed to the desktop view where each item is enclosed by a tr tag. Please inspect the html tree for further clarifications
 
 #### Customizing Specific Cells, Rows or Columns
 All cells get applied two classnames by default behavior. Those two are taken from the content and headers props objects user provides to the component:

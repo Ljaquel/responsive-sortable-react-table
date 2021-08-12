@@ -73,6 +73,8 @@
     Object mapping field keys to strings representing the label that will be displayed on the header of the table
 * className: String\
     Class name for the table component. This will be inserted to the table html tag. This is not required as you could just use the class name it comes with by default which is 'responsive-sortable-react-table'
+* id: String\
+    ID for the table component. This will be inserted to the table html tag
 * breakpoint: Number\
     Number in 'px'. Determines breakpoint for the desktop-mobile layout transition of the table
 * onSort: Function\
